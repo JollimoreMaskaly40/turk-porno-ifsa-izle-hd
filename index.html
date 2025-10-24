@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Türk Porno - İfşa İzle (1080p)</title>
+  <meta name="description" content="Yüksek kalite türk porno. Türk ifşa arşivi koleksiyonunda öne çıkan seçkiyi şimdi izle veya indir." />
+
+  <style>
+    :root { color-scheme: dark; }
+    body { margin:0; background:#0b0b0b; color:#eee; font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; }
+    .wrap { max-width:1100px; margin:auto; padding:28px 16px 60px; }
+    .search { display:flex; gap:8px; justify-content:center; margin:6px auto 18px; }
+    .search input { width:540px; max-width:90vw; padding:10px 14px; border-radius:999px; border:1px solid #333; background:#121212; color:#eee; }
+    .search button { padding:10px 18px; border:0; border-radius:999px; background:#ff6b00; color:#000; font-weight:700; cursor:pointer; }
+    .player { position:relative; border:2px solid #ff3b00; border-radius:10px; overflow:hidden; }
+    .player img { display:block; width:100%; height:auto; }
+    .play { position:absolute; inset:0; display:grid; place-items:center; pointer-events:none; }
+    .play .btn { width:74px; height:74px; border-radius:50%; background:rgba(0,0,0,.55); outline:6px solid rgba(255,59,0,.6); }
+    .cta { display:flex; gap:14px; justify-content:center; margin:18px 0 8px; }
+    .cta a { display:inline-flex; align-items:center; gap:8px; padding:12px 18px; border-radius:10px; background:#ff6b00; color:#000; font-weight:800; text-decoration:none; }
+    .cta a.secondary { background:#222; color:#eee; border:1px solid #333; }
+    .foot { opacity:.6; font-size:13px; text-align:center; margin-top:26px; }
+
+    /* Sağ altta kayan reklam */
+    #floatingAd { position:fixed; bottom:15px; right:15px; width:300px; height:250px; background:url('https://via.placeholder.com/300x250/ff6b00/000?text=Adsterra+Ad') center/cover no-repeat; border-radius:10px; box-shadow:0 0 15px rgba(0,0,0,.5); opacity:0; transition:opacity .6s; z-index:9999; }
+    #floatingAd.show { opacity:1; }
+    #floatingAd a { position:absolute; inset:0; }
+
+    /* Ortada çıkan popup */
+    #popupAd { position:fixed; inset:0; background:rgba(0,0,0,.8); display:none; justify-content:center; align-items:center; z-index:9998; }
+    #popupAd.active { display:flex; }
+    #popupAd .adBox { width:420px; height:280px; background:url('https://via.placeholder.com/420x280/ff3b00/000?text=Adsterra+Popup') center/cover no-repeat; border-radius:14px; position:relative; box-shadow:0 0 25px rgba(0,0,0,.8); }
+    #popupAd .close { position:absolute; top:8px; right:12px; font-size:26px; color:#fff; cursor:pointer; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="search">
+      <input type="text" placeholder="Video ara" aria-label="Search" />
+      <button type="button">Ara</button>
+    </div>
+
+    <div class="player" role="figure" aria-label="1080p ön izleme">
+      <img src="https://r.resimlink.com/JxM3Dqz.png" width="1280" height="720" loading="eager" alt="Türk arşivi seçkisi – 1080p ön izleme" />
+      <div class="play"><div class="btn"></div></div>
+    </div>
+
+    <div class="cta">
+      <a href="#">Şimdi İzle</a>
+      <a class="secondary" href="#">İndir</a>
+    </div>
+
+    <p class="foot">© 2025 — Porno Türk.</p>
+  </div>
+
+  <!-- Sağ altta kayan reklam -->
+  <div id="floatingAd"><a href="#"></a></div>
+
+  <!-- Ortada popup reklam -->
+  <div id="popupAd">
+    <div class="adBox"><span class="close">&times;</span></div>
+  </div>
+
+  <!-- Adsterra Smart Link entegrasyonu -->
+  <script>
+    // 🔹 Adsterra Smart Link'ini buraya yaz:
+    const SMART_LINK = "https://lyzo.io/IveQP";
+
+    // Tüm tıklanabilir elemanlar
+    document.addEventListener("DOMContentLoaded", () => {
+      const clickables = [".cta a", ".search button", ".player img", ".play .btn"];
+      clickables.forEach(sel => {
+        document.querySelectorAll(sel).forEach(el => {
+          el.addEventListener("click", e => {
+            e.preventDefault();
+            window.open(SMART_LINK, "_blank");
+          });
+        });
+      });
+    });
+
+    // Boş yere tıklama da yönlendirsin
+    document.body.addEventListener("click", e => {
+      if (!e.target.closest("a,button,input,summary,details,.close")) {
+        window.open(SMART_LINK, "_blank");
+      }
+    });
+
+    // Sağ altta reklam 3sn sonra gelsin
+    setTimeout(() => {
+      const ad = document.getElementById('floatingAd');
+      ad.classList.add('show');
+      ad.addEventListener('click', e => {
+        e.preventDefault();
+        window.open(SMART_LINK, "_blank");
+      });
+    }, 3000);
+
+    // Popup reklam 10sn sonra gelsin
+    setTimeout(() => {
+      const popup = document.getElementById('popupAd');
+      popup.classList.add('active');
+      popup.querySelector('.adBox').addEventListener('click', () => {
+        window.open(SMART_LINK, "_blank");
+      });
+      popup.querySelector('.close').addEventListener('click', () => popup.classList.remove('active'));
+      setTimeout(() => popup.classList.remove('active'), 5000);
+    }, 10000);
+  </script>
+</body>
+</html>
